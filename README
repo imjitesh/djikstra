@@ -1,0 +1,18 @@
+Djikstra
+========
+
+Implementation of Djikstra's Algorithm to find shortest path between 2 nodes in a graph.
+
+Input
+=====
+On stdin:
+No. of vertices
+2D int Adjacency matrix
+Start Node
+End Node
+
+Output
+======
+On stdout
+path
+length
