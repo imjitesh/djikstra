@@ -37,18 +37,11 @@ int main()
 
   //std::cout<<data(1, 1)<<std::endl<<data(2, 2);
   int sn, en;
-<<<<<<< HEAD
-<<<<<<< HEAD
   char visited[N];//lame comment
-=======
   cin>>sn>>en;//read start and end node
-=======
   std::cin>>sn>>en;//read start and end node
-
->>>>>>> aa255b727f72d63daf39080f03c052190c46a0d6
   //implement visitedSet as BITarray <char> type
   //how to store path info?
->>>>>>> ca57092919bf56014da518f5a159828b8b97c46c
   return 0;
 }
   
