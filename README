@@ -1,8 +1,10 @@
+======
 Djikstra
 ========
 
 Implementation of Djikstra's Algorithm to find shortest path between 2 nodes in a graph.
 
+======
 Input
 =====
 On stdin:
@@ -11,6 +13,7 @@ No. of vertices (N)
 Start Node 0<sn<N+1
 End Node   0<en<N+1
 
+======
 Output
 ======
 On stdout
