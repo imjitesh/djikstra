@@ -16,14 +16,42 @@ public:
   }
 };
 
+struct history{
+  int len, prev;
+}
+
 int main(){
   int N; std::cin>>N;
   graph data(N);
   for (int i=0; i<N*N; i++)
     std::cin>>data[i];
   //std::cout<<data(1, 1)<<std::endl<<data(2, 2);
-  int sn, en;
-  char visited[N];
+  int sn, en, visited_size = 0;//as soon as visited size==N, break
+  history answer[N];
+  int visited[N];
+  for (int i=0; i<N; i++){
+    answer[i].len = -1;
+    visited[i] = 0;
+  }
+  cin>>sn>>en;
+  //start the algo!
+  answer[i] = 0;
+  int curn=sn, new_len;//current_node
+  while(visited_size <= N){
+    for (int i=0; i<N; i++){
+      if (!visited[i] && data(curn, i) >= 0){
+	new_len = answer[curn].len + data(curn, i);
+	if (new_len < answer[i].len || answer[i] == -1){
+	  answer[i].len = new_len;
+	  answer[i].prev = curn;
+	}
+      }
+    }
+    visited_size++;
+    visited[curn] = 1;
+    //select new node
+  }
+    
   return 0;
 }
   
