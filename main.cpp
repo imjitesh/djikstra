@@ -23,7 +23,7 @@ int main(){
     std::cin>>data[i];
   //std::cout<<data(1, 1)<<std::endl<<data(2, 2);
   int sn, en;
-  char visited[N];
+  char visited[N];//lame comment
   return 0;
 }
   
