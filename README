@@ -6,10 +6,10 @@ Implementation of Djikstra's Algorithm to find shortest path between 2 nodes in 
 Input
 =====
 On stdin:
-No. of vertices
+No. of vertices (N)
 2D int Adjacency matrix
-Start Node
-End Node
+Start Node 0<sn<N+1
+End Node   0<en<N+1
 
 Output
 ======
