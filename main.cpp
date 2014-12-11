@@ -40,7 +40,7 @@ int main()
     std::cin>>data[i];
   //std::cout<<data(1, 1)<<std::endl<<data(2, 2);
   
-  int i, sn, en, visited_size = 0;//as soon as visited size==N, break
+  int sn, en, visited_size = 0;//as soon as visited size==N, break
   //answer is a pair of {len, previous}
  
   history answer[N];
@@ -49,15 +49,16 @@ int main()
   //visited means fully checked (compare with wikipedia algo)
   int visited[N];
   //initialising
-  for (i=0; i<N; i++)
+  for (int i=0; i<N; i++)
     {
       answer[i].len = -1; //equivalent to infinity
       visited[i] = 0;
     }
   std::cin>>sn>>en;
   //start the algo!
-  answer[i] = 0;
+  //oh! set the first (cur_node) length to 0. i not used again!!
   int curn=sn, new_len;
+  answer[curn].len = 0;
   while(visited_size <= N)
     {
       for (int i=0; i<N; i++)
