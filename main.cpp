@@ -28,28 +28,33 @@ public:
 struct history
 {
   int len, prev;
-}
+};
 
-int main(){
-  int N; std::cin>>N;
+int main()
+{
+  int N; 
+  std::cin>>N;
   graph data(N);
+  
   for (int i=0; i<N*N; i++)//read the adj. matrix
     std::cin>>data[i];
   //std::cout<<data(1, 1)<<std::endl<<data(2, 2);
-  int sn, en, visited_size = 0;//as soon as visited size==N, break
+  
+  int i, sn, en, visited_size = 0;//as soon as visited size==N, break
   //answer is a pair of {len, previous}
+ 
   history answer[N];
   //visited is a BitArray. If vertex 4,2 are visited then
   //visited == {0,0,1,0,1,...}
   //visited means fully checked (compare with wikipedia algo)
   int visited[N];
   //initialising
-  for (int i=0; i<N; i++)
+  for (i=0; i<N; i++)
     {
       answer[i].len = -1; //equivalent to infinity
       visited[i] = 0;
     }
-  cin>>sn>>en;
+  std::cin>>sn>>en;
   //start the algo!
   answer[i] = 0;
   int curn=sn, new_len;
